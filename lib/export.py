@@ -24,8 +24,15 @@ def make_css():
         ans.append(read_from_file(f'data/{i}'))
     return '\n\n'.join(ans)
 
-def make_html(html: str, template: str = read_from_file('data/template.html') if exist('data/template.html') else '[html]') -> str:
-    return template.replace('[html]', html).replace('[style]', make_css())
+def make_html(html: str, 
+              template: str = read_from_file('data/template.html') if exist('data/template.html') else '[html]', 
+              header: str = read_from_file('data/header.html') if exist('data/header.html') else '', 
+              footer: str = read_from_file('data/footer.html') if exist('data/footer.html') else '') -> str:
+    template = template.replace('[header]', header)
+    template = template.replace('[footer]', footer)
+    template = template.replace('[style]', make_css())
+    template = template.replace('[html]', html)
+    return template
 
 def export(val):
     source = val.path
