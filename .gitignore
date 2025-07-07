@@ -2,3 +2,7 @@ t.*
 *.ipynb 
 *.pdf 
 t 
+source
+public
+data
+__pycache__

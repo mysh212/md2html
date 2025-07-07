@@ -28,4 +28,7 @@ def init():
 
 if __name__ == '__main__':
     val, check = init()
+    if check is None:
+        error('No action received.')
+        exit(-1)
     check(val)
