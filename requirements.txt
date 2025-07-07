@@ -38,9 +38,9 @@ pytest==8.4.1
 pytest-cov==3.0.0
 python-dateutil
 python-magic==0.4.27
-python-magic-bin==0.4.14
+# python-magic-bin==0.4.14 # Only for windows
 python-markdown-math==0.9
-pywin32==308
+# pywin32==308 # As above
 PyYAML==6.0.2
 pyzmq
 ratelim==0.1.6
