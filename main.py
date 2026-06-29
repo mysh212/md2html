@@ -24,7 +24,7 @@ def init():
 
     val = ps.parse_args()
     debug(val)
-    return val, val.check
+    return val, val.check if hasattr(val, 'check') else None
 
 if __name__ == '__main__':
     val, check = init()
