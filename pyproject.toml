@@ -1,0 +1,12 @@
+[project]
+name = "md2html"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "markdown>=3.10.2",
+    "markdown-customblocks>=1.5.4",
+    "pymdown-extensions>=11.0",
+    "python-markdown-math>=0.9",
+]
